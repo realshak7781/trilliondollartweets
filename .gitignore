@@ -1,0 +1,137 @@
+# ==============================================================================
+# Production .gitignore for Next.js 16 + Vercel Deployment
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Dependencies & Package Managers
+# ------------------------------------------------------------------------------
+node_modules/
+.pnp
+.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# ------------------------------------------------------------------------------
+# Production Build, Cache & Compilation Artifacts
+# ------------------------------------------------------------------------------
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Sensitive Credentials (CRITICAL for GitHub/Vercel)
+# ------------------------------------------------------------------------------
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+*.crt
+# Allow public example environment file
+!.env.example
+
+# ------------------------------------------------------------------------------
+# Design Repository, References, Research & Extraction Artifacts
+# ------------------------------------------------------------------------------
+docs/design-references/
+docs/research/
+design-references/
+design/
+design-repo/
+reference/
+references/
+*.fig
+*.sketch
+*.xd
+
+# ------------------------------------------------------------------------------
+# One-off Scraping, Crawling & Migration Scripts
+# ------------------------------------------------------------------------------
+scripts/*.mjs
+!scripts/.gitkeep
+
+# ------------------------------------------------------------------------------
+# Hosting, Cloud & Deployment Tooling
+# ------------------------------------------------------------------------------
+.vercel
+.serverless/
+.sst/
+
+# ------------------------------------------------------------------------------
+# Logs & Debug Output
+# ------------------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# IDEs, Editors & Developer Tooling
+# ------------------------------------------------------------------------------
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+
+# ------------------------------------------------------------------------------
+# Operating System & Filesystem Junk
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------------------------
+# Clone Template & Agent Artifacts (Excluded from Production Repo)
+# ------------------------------------------------------------------------------
+.agents/
+.claude/
+.github/
+docs/
+AGENTS.md
+CLAUDE.md
+CHANGELOG.md
+CONTRIBUTING.md
+SECURITY.md
+Dockerfile
+Dockerfile.dev
+docker-compose.yml
+
+# ------------------------------------------------------------------------------
+# Local Agent, Scratch & Temporary Files
+# ------------------------------------------------------------------------------
+.claude/settings.local.json
+.claude/skills/customize/
+.claude/skills/release/
+temp/
+tmp/
+scratch/
